@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Etapa 1: build
 FROM python:3.11-slim AS builder
 
@@ -25,4 +26,28 @@ RUN useradd -m appuser \
 
 USER appuser
 
+=======
+# build
+FROM python:3.10 AS builder
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --user -r requirements.txt
+
+# final
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY --from=builder /root/.local /root/.local
+
+COPY app.py .
+COPY Votaciones.xlsx .
+
+ENV PATH=/root/.local/bin:$PATH
+
+EXPOSE 5000
+
+>>>>>>> 86e35b029003c6099c3e627faebacbd8917d2905
 CMD ["python", "app.py"]

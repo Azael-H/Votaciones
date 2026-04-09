@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM python:3.11
 
 WORKDIR /app
@@ -14,4 +15,17 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
+=======
+FROM python:3.10
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+EXPOSE 5000
+
+>>>>>>> 86e35b029003c6099c3e627faebacbd8917d2905
 CMD ["python", "app.py"]

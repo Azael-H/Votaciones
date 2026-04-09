@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 selenium==4.20.0
 webdriver-manager==4.0.1
 pandas==2.2.3
 openpyxl==3.1.0
+=======
+flask
+pandas
+openpyxl
+>>>>>>> 86e35b029003c6099c3e627faebacbd8917d2905

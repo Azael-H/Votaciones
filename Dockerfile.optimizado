@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 FROM python:3.11-slim
 
 WORKDIR /app
@@ -16,3 +17,19 @@ RUN useradd -m appuser
 USER appuser
 
 CMD ["python", "app.py"]
+=======
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app.py .
+COPY Votaciones.xlsx .
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]    
+>>>>>>> 86e35b029003c6099c3e627faebacbd8917d2905
