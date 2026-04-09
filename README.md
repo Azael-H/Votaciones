@@ -1,6 +1,6 @@
 # Verificador de Miembros de Mesa
 
-Aplicación en Python que lee una lista de DNIs desde Excel, consulta la página de la ONPE y genera otro Excel con los resultados.
+Aplicación en Python que lee una lista de DNIs desde un Excel, consulta la página de la Reniec y genera otro Excel con la informacion de los DNI colocados.
 
 ## Requisitos
 
